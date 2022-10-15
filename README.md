@@ -1,5 +1,5 @@
-#Install easygui
-pip3 install easygui
-
-#Execute the program
-python3 WorldCup.py
+#Install easygui <br/>
+pip3 install easygui <br/>
+<br/>
+#Execute the program <br/>
+python3 WorldCup.py <br/>
