@@ -1,5 +1,6 @@
 
-from easygui import *
+# from easygui import *
+import easygui
 import random
 import sys
 
@@ -38,7 +39,7 @@ def QuarterFinals():
         + str(Hquarter).upper()
     )
     choices = ["Semi-finals"]
-    reply = buttonbox(msg, choices=choices)
+    reply = easygui.buttonbox(msg, choices=choices)
     if reply == "Semi-finals":
         semiFinals()
     else:
@@ -52,7 +53,7 @@ def winners():
 
     msg = "             WINNER OF FIFA WORLD CUP 2022 IS:  " + str(winner).upper() + " !!!"
     choices = ["OK"]
-    reply = buttonbox(msg, image=winnerIMG, choices=choices)
+    reply = easygui.buttonbox(msg, image=winnerIMG, choices=choices)
     sys.exit(0)
 
 
@@ -61,7 +62,7 @@ def finals():
 
     msg = "Final\n\n\n" + str(win1final) + str(" vs ") + str(win2final)
     choices = ["Winner"]
-    reply = buttonbox(msg, choices=choices)
+    reply = easygui.buttonbox(msg, choices=choices)
     if reply == "Winner":
         winners()
     else:
@@ -82,7 +83,7 @@ def semiFinals():
         + str(semi4win).upper()
     )
     choices = ["Finals"]
-    reply = buttonbox(msg, choices=choices)
+    reply = easygui.buttonbox(msg, choices=choices)
     if reply == "Finals":
         finals()
     else:
@@ -217,7 +218,7 @@ def roundOf16():
         + str(G2roundOf16).upper()
     )
     choices = ["Quarter-finals"]
-    reply = buttonbox(msg, choices=choices)
+    reply = easygui.buttonbox(msg, choices=choices)
     if reply == "Quarter-finals":
         QuarterFinals()
     else:
@@ -309,7 +310,7 @@ def main():
         )
     )
     choices = ["Begin the World Cup!!!"]
-    reply = buttonbox(msg, image=beginIMG, choices=choices)
+    reply = easygui.buttonbox(msg, image=beginIMG, choices=choices)
     if reply == "Begin the World Cup!!!":
         roundOf16()
     elif reply == "./images/imageWorldCup.gif":
